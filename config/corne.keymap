@@ -14,15 +14,31 @@
         plover: plover {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 3 &kp LS(P) &kp LS(H) &kp LS(R) &kp LS(O) &kp LS(L) &kp LS(G)>;
+            bindings =
+                <&to 3>,
+                <&macro_press>,
+                <&kp E &kp R &kp F &kp V &kp O &kp L>,
+                <&macro_release>,
+                <&kp E &kp R &kp F &kp V &kp O &kp L>;
+
             label = "PLOVER";
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
 
         off_plover: off_plover {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 0 &kp LS(P) &kp LS(H) &kp LS(R) &kp LS(O) &kp LS(L) &kp LS(G)>;
+            bindings =
+                <&to 0>,
+                <&macro_press>,
+                <&kp E &kp R &kp F &kp V &kp O &kp L>,
+                <&macro_release>,
+                <&kp E &kp R &kp F &kp V &kp O &kp L>;
+
             label = "OFF_PLOVER";
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
     };
 
