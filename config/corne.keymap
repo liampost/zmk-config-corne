@@ -66,10 +66,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E         &kp R          &kp T     &kp Y   &kp U      &kp I      &kp O    &kp P     &kp ENTER
-&kp LEFT_ALT  &kp A  &kp S  &kp D         &kp F          &kp G     &kp H   &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT     &kp Z  &kp X  &kp C         &kp V          &tog 1    &tog 2  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
-                            &kp LEFT_WIN  &kp BACKSPACE  &kp B     &kp N   &kp SPACE  &kp RCTRL
+&tog 1        &kp Q  &kp W  &kp E    &kp R          &kp T      &kp Y              &kp U      &kp I      &kp O    &kp P     &tog 2
+&kp LEFT_ALT  &kp A  &kp S  &kp D    &kp F          &kp G      &kp H              &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT     &kp Z  &kp X  &kp C    &kp V          &kp TAB    &kp RIGHT_CONTROL  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
+                            &plover  &kp BACKSPACE  &kp B      &kp N              &kp SPACE  &kp ENTER
             >;
         };
 
@@ -81,7 +81,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
+&trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &trans
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &kp DELETE
 &kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &kp LEFT_WIN
                                         &trans        &trans        &kp SPACE       &kp RET   &trans    &kp RALT
@@ -96,10 +96,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &plover   &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&trans     &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&kp LCTRL  &kp UNDER  &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans     &trans  &trans    &trans    &trans       &trans     &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                              &plover   &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
 
