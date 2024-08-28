@@ -39,6 +39,20 @@
             wait-ms = <5>;
             tap-ms = <5>;
         };
+
+        steno: steno {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp E &kp R &kp F &kp V &kp O &kp L>,
+                <&macro_release>,
+                <&kp E &kp R &kp F &kp V &kp O &kp L>;
+
+            label = "STENO";
+            wait-ms = <5>;
+            tap-ms = <5>;
+        };
     };
 
     keymap {
@@ -91,8 +105,8 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans       &trans  &trans    &trans  &trans  &trans         &trans  &trans         &trans
-&trans  &kp Q   &kp W   &kp E        &kp R   &kp T     &kp H   &kp J   &kp K          &kp L   &kp SEMICOLON  &kp SQT
+&steno  &trans  &trans  &trans       &trans  &trans    &trans  &trans  &trans         &trans  &trans         &trans
+&trans  &kp Q   &kp W   &kp E        &kp R   &kp T     &kp H   &kp J   &kp K          &kp L   &kp SEMICOLON  &kp LS(LEFT_BRACKET)
 &trans  &kp A   &kp S   &kp D        &kp F   &kp G     &kp H   &kp J   &kp K          &kp L   &kp SEMICOLON  &kp SQT
                         &off_plover  &kp C   &kp V     &kp N   &kp M   &kp BACKSPACE
             >;
