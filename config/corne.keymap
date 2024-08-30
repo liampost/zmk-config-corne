@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     macros {
@@ -81,10 +82,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6         &kp N7     &kp N8     &kp N9     &kp N0  &kp LC(Z)
+&trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6         &kp N7     &kp N8     &kp N9     &kp N0  &kp LC(ESCAPE)
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans  &kp DELETE
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &kp LC(LS(P))  &trans     &trans     &trans     &trans  &kp LEFT_WIN
-                                        &trans        &trans        &kp SPACE       &kp RC(X)      &kp RC(C)  &kp RC(P)
+&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &kp LC(LS(V))  &kp RC(S)  &kp RC(Z)  &trans     &trans  &kp LEFT_WIN
+                                        &trans        &trans        &kp SPACE       &kp RC(X)      &kp RC(C)  &kp RC(V)
             >;
         };
 
@@ -96,10 +97,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans     &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-&kp LCTRL  &kp UNDER  &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans     &trans  &trans    &trans    &trans       &trans     &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                              &plover   &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&trans     &kp EXCL   &kp AT      &kp HASH           &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&kp LCTRL  &kp UNDER  &kt C_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans     &trans      &trans             &trans           &trans       &trans     &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                  &plover            &trans           &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
 
