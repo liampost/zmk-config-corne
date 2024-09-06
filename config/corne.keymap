@@ -54,6 +54,14 @@
             wait-ms = <5>;
             tap-ms = <5>;
         };
+
+        steno_caps: steno_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp K &kp P &kp A>, <&macro_release>;
+
+            label = "STENO_CAPS";
+        };
     };
 
     keymap {
@@ -67,10 +75,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp LEFT_WIN  &kp Q  &kp W  &kp E  &kp R          &kp T      &kp Y      &kp U      &kp I      &kp O    &kp P     &plover
-&kp LEFT_ALT  &kp A  &kp S  &kp D  &kp F          &kp G      &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT     &kp Z  &kp X  &kp C  &kp V          &kp TAB    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
-                            &mo 1  &kp BACKSPACE  &kp B      &kp ENTER  &kp SPACE  &mo 2
+&kp ESCAPE    &kp Q  &kp W  &kp E  &kp R          &kp T    &kp Y      &kp U      &kp I      &kp O    &kp P     &kp RIGHT_CONTROL
+&kp LEFT_ALT  &kp A  &kp S  &kp D  &kp F          &kp G    &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT     &kp Z  &kp X  &kp C  &kp V          &mo 4    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
+                            &mo 1  &kp BACKSPACE  &kp B    &kp ENTER  &kp SPACE  &mo 2
             >;
         };
 
@@ -82,9 +90,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6         &kp N7     &kp N8     &kp N9     &kp N0  &kp ESCAPE
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans  &kp DELETE
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &kp LC(LS(V))  &kp RC(S)  &kp RC(Z)  &trans     &trans  &kp LEFT_WIN
+&trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6         &kp N7     &kp N8     &kp N9     &kp N0     &kp ESCAPE
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans     &kp DELETE
+&kp LSHFT   &trans        &trans        &trans        &trans        &kp TAB         &kp LC(LS(V))  &kp RC(S)  &kp RC(Z)  &kp LC(F)  &kp LC(B)  &kp LEFT_WIN
                                         &trans        &trans        &kp SPACE       &kp RC(X)      &kp RC(C)  &kp RC(V)
             >;
         };
@@ -97,19 +105,28 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans     &kp EXCL   &kp AT      &kp HASH           &kp DLLR      &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-&kp LCTRL  &kp UNDER  &kt C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans     &trans      &trans             &trans        &trans       &trans     &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                  &plover            &trans        &kp SPACE    &kp RET    &trans     &kp RALT
+&trans     &kp EXCL   &kp AT      &kp HASH           &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&kp LCTRL  &kp UNDER  &kt C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans     &trans      &trans             &trans           &trans       &trans     &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                  &plover            &trans           &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
 
         layer_3 {
             bindings = <
-&steno  &trans  &trans  &trans       &trans  &trans    &trans  &trans  &trans     &trans  &trans         &kp LC(Z)
-&trans  &kp Q   &kp W   &kp E        &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O   &kp P          &kp LEFT_BRACKET
-&trans  &kp A   &kp S   &kp D        &kp F   &kp G     &kp H   &kp J   &kp K      &kp L   &kp SEMICOLON  &kp SQT
-                        &off_plover  &kp C   &kp V     &kp N   &kp M   &kp SPACE
+&steno       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7  &kp N8     &kp N9  &kt N0         &off_plover
+&trans       &kp Q         &kp W         &kp E          &kp R         &kp T     &kp Y         &kp U   &kp I      &kp O   &kp P          &kp LEFT_BRACKET
+&steno_caps  &kp A         &kp S         &kp D          &kp F         &kp G     &kp H         &kp J   &kp K      &kp L   &kp SEMICOLON  &kp SQT
+                                         &kp BACKSPACE  &kp C         &kp V     &kp N         &kp M   &kp SPACE
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &trans    &trans           &kp N7        &kp N8        &kp N9        &kp MINUS         &kp EQUAL
+&trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &trans    &trans           &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans  &trans  &trans  &trans  &trans          &trans    &trans           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp GRAVE         &kp NON_US_BACKSLASH
+                        &trans  &trans          &trans    &kp PRINTSCREEN  &trans        &trans
             >;
         };
     };
