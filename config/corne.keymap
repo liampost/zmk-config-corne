@@ -120,7 +120,7 @@
             bindings = <
 &trans     &kp EXCL   &kp AT    &kp HASH              &kp DLLR               &kp PRCNT            &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
 &kp LCTRL  &kp CARET  &kt AMPS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans     &trans    &trans                &trans                 &trans               &trans     &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+&kp LSHFT  &trans     &trans    &trans                &kp UNDER              &trans               &trans     &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                                 &plover               &kp LEFT_BRACKET       &kp RIGHT_BRACKET    &kp RET    &trans     &kp RALT
             >;
         };
@@ -142,6 +142,15 @@
 &trans  &trans  &kp PLUS  &kp MINUS  &kp PLUS        &trans       &kp MINUS        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERIOD  &kp RIGHT_BRACKET
 &trans  &trans  &trans    &trans     &trans          &trans       &kp ASTRK        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp GRAVE   &kp NON_US_BACKSLASH
                           &trans     &kp LEFT_SHIFT  &kp CARET    &kp PRINTSCREEN  &kp N0        &kp EQUAL
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
