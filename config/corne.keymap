@@ -102,7 +102,7 @@
 
             bindings = <
 &trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp BACKSPACE  &kp LEFT_BRACE  &kp UP_ARROW    &kp RIGHT_BRACE  &kp N0     &kp ESCAPE
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT       &kp LEFT        &kp DOWN_ARROW  &kp RIGHT        &trans     &kp DELETE
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp UNDER      &kp LEFT        &kp DOWN_ARROW  &kp RIGHT        &trans     &kp DELETE
 &kp LSHFT   &trans        &trans        &trans        &trans        &kp TAB         &kp LC(LS(V))  &kp RC(S)       &kp RC(Z)       &kp LC(F)        &kp LC(B)  &kp LEFT_WIN
                                         &trans        &trans        &kp SPACE       &kp RC(X)      &kp RC(C)       &kp RC(V)
             >;
@@ -142,15 +142,6 @@
 &trans  &trans  &kp PLUS  &kp MINUS  &kp PLUS        &trans       &kp MINUS        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERIOD  &kp RIGHT_BRACKET
 &trans  &trans  &trans    &trans     &trans          &trans       &kp ASTRK        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp GRAVE   &kp NON_US_BACKSLASH
                           &trans     &kp LEFT_SHIFT  &kp CARET    &kp PRINTSCREEN  &kp N0        &kp EQUAL
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
