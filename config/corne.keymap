@@ -72,7 +72,7 @@
         f13_tap: f13_tap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F13>;
+            bindings = <&kp F1>;
             label = "F13_TAP";
         };
     };
