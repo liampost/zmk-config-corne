@@ -9,6 +9,16 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        layer_on: layer_on {
+            compatible = "zmk,behavior-momentary-layer";
+            label = "LAYER_ON";
+        };
+    };
+};
+
+
+/ {
     macros {
         plover: plover {
             compatible = "zmk,behavior-macro";
@@ -68,6 +78,7 @@
             bindings = <&kp BACKSPACE &kp BACKSPACE>;
             label = "DOUBLE_DELETE";
         };
+
 
         f13_mo4: f13_mo4 {
             compatible = "zmk,behavior-macro";
