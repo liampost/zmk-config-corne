@@ -69,18 +69,22 @@
             label = "DOUBLE_DELETE";
         };
 
-        f13_mo4: f13_mo4 {
+        f13_tap: f13_tap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp F13>,
-                <&macro_press>,
-                <&mo 4>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 4>;
-            label = "F13_MO4";
+            bindings = <&kp F13>;
+            label = "F13_TAP";
+        };
+    };
+
+    behaviors {
+        f13_mo4: f13_mo4 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            bindings = <&mo>, <&f13_tap>;
+            retro-tap;
         };
     };
 
@@ -92,7 +96,7 @@
             bindings = <
 &kp LEFT_CONTROL  &kp Q  &kp W  &kp E  &kp R          &kp T       &kp Y      &kp U      &kp I      &kp O    &kp P     &kp ESCAPE
 &kp LEFT_ALT      &kp A  &kp S  &kp D  &kp F          &kp G       &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X  &kp C  &kp V          &f13_mo4    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
+&kp LSHFT         &kp Z  &kp X  &kp C  &kp V          &f13_mo4 4 0    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
                                 &mo 1  &kp BACKSPACE  &kp B       &kp ENTER  &kp SPACE  &mo 2
             >;
         };
