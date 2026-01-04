@@ -9,15 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        f13_mo4: f13_mo4 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mo 4>, <&mo 4>;
-            mods = <(~0)>;  // Never morph, always use base behavior
-        };
-    };
-
     macros {
         plover: plover {
             compatible = "zmk,behavior-macro";
