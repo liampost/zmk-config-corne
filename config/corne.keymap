@@ -133,7 +133,7 @@
             bindings = <
 &trans  &trans  &trans    &trans     &kp CARET       &trans       &kp BACKSLASH  &kp N7        &kp N8        &kp N9        &kp MINUS   &kp PSCRN
 &trans  &trans  &kp PLUS  &kp MINUS  &kp PLUS        &trans       &kp MINUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERIOD  &kp RIGHT_BRACKET
-&trans  &trans  &trans    &trans     &trans          &trans       &kp ASTRK      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp GRAVE   &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT
+&trans  &trans  &trans    &trans     &trans          &trans       &kp ASTRK      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp GRAVE   &kp BACKSLASH
                           &trans     &kp LEFT_SHIFT  &kp CARET    &kp PLUS       &kp N0        &kp EQUAL
             >;
         };
