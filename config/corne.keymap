@@ -81,9 +81,10 @@
         f12_mo4: f12_mo4 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
+            retro-tap;
             bindings = <&mo &f12_tap>;
         };
     };
