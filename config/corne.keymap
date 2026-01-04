@@ -10,9 +10,10 @@
 
 / {
     behaviors {
-        layer_on: layer_on {
+        layer_4_mo: layer_4_mo {
             compatible = "zmk,behavior-momentary-layer";
-            label = "LAYER_ON";
+            label = "LAYER_4_MO";
+            layer = <4>;  // the target layer
         };
     };
 };
@@ -87,13 +88,13 @@
             bindings =
                 <&macro_press>,
                 <&kp F13>,
-                <&layer_on 4>,
+                <&layer_4_mo>,    // <-- use the node we just defined
                 <&macro_release>,
-                <&kp F13>,
-                <&layer_off 4>;
+                <&kp F13>;        // no layer_off needed
 
             label = "F13_MO4";
         };
+
 
     };
 
