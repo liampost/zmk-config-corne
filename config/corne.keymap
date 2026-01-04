@@ -72,7 +72,14 @@
         f13_mo4: f13_mo4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F13>, <&mo 4>;
+            bindings =
+                <&macro_tap>,
+                <&kp F13>,
+                <&macro_press>,
+                <&mo 4>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 4>;
             label = "F13_MO4";
         };
     };
