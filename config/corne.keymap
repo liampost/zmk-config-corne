@@ -71,11 +71,14 @@
         };
 
         f13_mo4: f13_mo4 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 4 &kp F13>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 4 &kp F13>;
             label = "F13_MO4";
         };
     };
@@ -89,7 +92,7 @@
             bindings = <
 &kp LEFT_CONTROL  &kp Q  &kp W  &kp E  &kp R          &kp T    &kp Y      &kp U      &kp I      &kp O    &kp P     &kp ESCAPE
 &kp LEFT_ALT      &kp A  &kp S  &kp D  &kp F          &kp G    &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X  &kp C  &kp V          &f13_mo4 4 F13    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
+&kp LSHFT         &kp Z  &kp X  &kp C  &kp V          &f13_mo4    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
                                 &mo 1  &kp BACKSPACE  &kp B    &kp ENTER  &kp SPACE  &mo 2
             >;
         };
@@ -110,7 +113,7 @@
 
             bindings = <
 &trans     &kp EXCL   &kp AT    &kp HASH              &kp DLLR               &kp PRCNT            &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-&kp LCTRL  &kp CARET  &kt AMPS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LCTRL  &kp CARET  &kp AMPS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &kp CAPS   &trans     &trans    &trans                &kp UNDER              &trans               &trans     &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                                 &plover               &kp LEFT_BRACKET       &kp RIGHT_BRACKET    &kp RET    &trans     &kp RALT
             >;
