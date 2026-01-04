@@ -71,15 +71,11 @@
         };
 
         f13_mo4: f13_mo4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-
-            bindings =
-                <&macro_press>,
-                <&kp F13 &mo 4>,
-                <&macro_release>,
-                <&kp F13>;
-
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
             label = "F13_MO4";
         };
     };
@@ -93,7 +89,7 @@
             bindings = <
 &kp LEFT_CONTROL  &kp Q  &kp W  &kp E  &kp R          &kp T    &kp Y      &kp U      &kp I      &kp O    &kp P     &kp ESCAPE
 &kp LEFT_ALT      &kp A  &kp S  &kp D  &kp F          &kp G    &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X  &kp C  &kp V          &f13_mo4    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
+&kp LSHFT         &kp Z  &kp X  &kp C  &kp V          &f13_mo4 4 F13    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
                                 &mo 1  &kp BACKSPACE  &kp B    &kp ENTER  &kp SPACE  &mo 2
             >;
         };
