@@ -12,12 +12,11 @@
     behaviors {
         layer_4_mo: layer_4_mo {
             compatible = "zmk,behavior-momentary-layer";
-            label = "LAYER_4_MO";
-            layer = <4>;  // the target layer
+            #binding-cells = <0>;   // REQUIRED for ZMK
+            layer = <4>;            // the target layer
         };
     };
 };
-
 
 / {
     macros {
@@ -80,7 +79,6 @@
             label = "DOUBLE_DELETE";
         };
 
-
         f13_mo4: f13_mo4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -88,14 +86,12 @@
             bindings =
                 <&macro_press>,
                 <&kp F13>,
-                <&layer_4_mo>,    // <-- use the node we just defined
+                <&layer_4_mo>,    // momentary layer node
                 <&macro_release>,
                 <&kp F13>;        // no layer_off needed
 
             label = "F13_MO4";
         };
-
-
     };
 
     keymap {
@@ -103,12 +99,6 @@
 
         default_layer {
             label = "Home";
-
-            // -----------------------------------------------------------------------------------------,
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |,
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |,
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |,
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |;
 
             bindings = <
 &kp LEFT_CONTROL  &kp Q  &kp W  &kp E  &kp R          &kp T    &kp Y      &kp U      &kp I      &kp O    &kp P     &kp ESCAPE
@@ -121,12 +111,6 @@
         lower_layer {
             label = "Arrows";
 
-            // -----------------------------------------------------------------------------------------,
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |,
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |,
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |,
-            //                    | GUI |     | SPC |   | ENT |     | ALT |;
-
             bindings = <
 &trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp BACKSPACE  &kp LEFT_BRACE  &kp UP_ARROW    &kp RIGHT_BRACE  &kp N0     &kp ESCAPE
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp UNDER      &kp LEFT        &kp DOWN_ARROW  &kp RIGHT        &trans     &kp DELETE
@@ -137,12 +121,6 @@
 
         raise_layer {
             label = "Symbols";
-
-            // -----------------------------------------------------------------------------------------,
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |,
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |,
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |,
-            //                    | GUI |     | SPC |   | ENT |     | ALT |;
 
             bindings = <
 &trans     &kp EXCL   &kp AT    &kp HASH              &kp DLLR               &kp PRCNT            &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
