@@ -8,15 +8,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-/ {
-    behaviors {
-        layer_4_mo: layer_4_mo {
-            compatible = "zmk,behavior-momentary-layer";
-            #binding-cells = <1>;   // MUST be 1 for momentary-layer
-            layer = <4>;            // the target layer
-        };
-    };
-};
 
 / {
     macros {
@@ -85,8 +76,7 @@
 
             bindings =
                 <&macro_press>,
-                <&kp F13>,
-                <&layer_4_mo>,    // reference the node with #binding-cells = 1
+                <&kp F13 &mo 4>,
                 <&macro_release>,
                 <&kp F13>;
 
