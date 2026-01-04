@@ -12,7 +12,7 @@
     behaviors {
         layer_4_mo: layer_4_mo {
             compatible = "zmk,behavior-momentary-layer";
-            #binding-cells = <0>;   // REQUIRED for ZMK
+            #binding-cells = <1>;   // MUST be 1 for momentary-layer
             layer = <4>;            // the target layer
         };
     };
@@ -86,9 +86,9 @@
             bindings =
                 <&macro_press>,
                 <&kp F13>,
-                <&layer_4_mo>,    // momentary layer node
+                <&layer_4_mo>,    // reference the node with #binding-cells = 1
                 <&macro_release>,
-                <&kp F13>;        // no layer_off needed
+                <&kp F13>;
 
             label = "F13_MO4";
         };
