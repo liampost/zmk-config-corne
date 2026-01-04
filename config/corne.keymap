@@ -83,7 +83,7 @@
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <100>;
-            bindings = <&f13_tap>, <&mo 4>;
+            bindings = <&f13_tap &mo>;
             retro-tap;
         };
     };
@@ -96,7 +96,7 @@
             bindings = <
 &kp LEFT_CONTROL  &kp Q  &kp W  &kp E  &kp R          &kp T       &kp Y      &kp U      &kp I      &kp O    &kp P     &kp ESCAPE
 &kp LEFT_ALT      &kp A  &kp S  &kp D  &kp F          &kp G       &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X  &kp C  &kp V          &f13_mo4 0 0    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
+&kp LSHFT         &kp Z  &kp X  &kp C  &kp V          &f13_mo4 0 4    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
                                 &mo 1  &kp BACKSPACE  &kp B       &kp ENTER  &kp SPACE  &mo 2
             >;
         };
