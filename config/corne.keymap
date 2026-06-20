@@ -92,10 +92,10 @@
         default_layer {
             label = "Home";
             bindings = <
-&kp LEFT_CONTROL  &kp Q  &kp W  &kp E  &kp R          &kp T       &kp Y      &kp U      &kp I      &kp O    &kp P     &kp ESCAPE
-&kp LEFT_ALT      &kp A  &kp S  &kp D  &kp F          &kp G       &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X  &kp C  &kp V          &f12_mo4    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
-                                &mo 1  &kp BACKSPACE  &kp B       &kp ENTER  &kp SPACE  &mo 2
+&kp LEFT_CONTROL  &kp Q  &kp W  &kp E  &kp R          &kp T    &kp Y      &kp U      &kp I      &kp O    &kp P     &kp ESCAPE
+&kp LEFT_ALT      &kp A  &kp S  &kp D  &kp F          &kp G    &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT         &kp Z  &kp X  &kp C  &kp V          &mo 4    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
+                                &mo 1  &kp BACKSPACE  &kp B    &kp ENTER  &kp SPACE  &mo 2
             >;
         };
 
@@ -122,7 +122,7 @@
         Steno {
             label = "Steno";
             bindings = <
-&steno  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7  &kp N8     &kp N9  &kt N0         &off_plover
+&steno  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7  &kp N8     &kp N9  &kp N0         &off_plover
 &trans  &kp Q         &kp W         &kp E          &kp R         &kp T     &kp Y         &kp U   &kp I      &kp O   &kp P          &kp LEFT_BRACKET
 &trans  &kp A         &kp S         &kp D          &kp F         &kp G     &kp H         &kp J   &kp K      &kp L   &kp SEMICOLON  &kp SQT
                                     &kp BACKSPACE  &kp C         &kp V     &kp N         &kp M   &kp SPACE
@@ -132,10 +132,10 @@
         Numpad {
             label = "Numpad";
             bindings = <
-&trans  &trans  &trans    &trans     &kp CARET       &trans       &kp BACKSLASH  &kp N7        &kp N8        &kp N9        &kp MINUS   &kp PSCRN
-&trans  &trans  &kp PLUS  &kp MINUS  &kp PLUS        &trans       &kp MINUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERIOD  &kp RIGHT_BRACKET
-&trans  &trans  &trans    &trans     &trans          &trans       &kp ASTRK      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp GRAVE   &kp BACKSLASH
-                          &trans     &kp LEFT_SHIFT  &kp CARET    &kp PLUS       &kp N0        &kp EQUAL
+&trans  &trans  &trans    &trans         &kp CARET       &trans       &kp BACKSLASH  &kp N7        &kp N8        &kp N9        &kp MINUS   &kp PSCRN
+&trans  &trans  &kp PIPE  &kp BACKSLASH  &kp TILDE       &trans       &kp MINUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERIOD  &kp RIGHT_BRACKET
+&trans  &trans  &trans    &trans         &trans          &trans       &kp ASTRK      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp GRAVE   &kp BACKSLASH
+                          &trans         &kp LEFT_SHIFT  &kp CARET    &kp PLUS       &kp N0        &kp EQUAL
             >;
         };
     };
